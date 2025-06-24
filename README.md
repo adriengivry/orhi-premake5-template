@@ -14,14 +14,19 @@ A template project to quickly get started with [OpenRHI](https://github.com/adri
 ```powershell
 git clone --recurse-submodules git://github.com/{username}/{projectname}.git
 ```
-4. Edit the following lines in `premake5.lua`:
+4. Select the OpenRHI version you want to use:
+```powershell
+cd {projectname}/deps/orhi
+git checkout main # or specify a version: e.g. v0.1.0, etc.
+```
+5. Edit the following lines in `premake5.lua`:
 ```lua
 workspace "my-solution" -- Replace with your solution name
 startproject "my-project" -- Replace with your project name
 project "my-project" -- Replace with your project name
 ```
-5. Generate projects:
+6. Generate projects:
 ```powershell
 premake5 vs2022 --compile-opengl --gfxapi=opengl
 ```
-6. You're all set! Enjoy!
+7. You're all set! Enjoy!
